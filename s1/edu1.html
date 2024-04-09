@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог образовательных курсов</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url(zad.jpg); 
+            background-size: cover;
+            background-position: center;
+        }
+        .jumbotron {
+            background-size: cover;
+            background-position: center;
+            color: white;
+            position: relative;
+            height: 500px; 
+        }
+        .jumbotron .container {
+            padding-top: 100px;
+        }
+        .banner-text {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+        }
+        @media (max-width: 768px) {
+            .banner-text {
+                top: initial;
+                right: initial;
+                bottom: 20px;
+                transform: none;
+            }
+        }
+        .course-section {
+            padding: 50px 0;
+        }
+        .course-item {
+            background-color: #8f8f8fbd;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+        }
+        .course-item:hover {
+            transform: scale(1.05);
+            filter: brightness(70%);
+        }
+        .course-item img {
+            width: 155px; /* Задайте нужную ширину изображения */
+            height: 130px; /* Задайте нужную высоту изображения */
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 30px 0;
+        }
+        footer p {
+            margin-bottom: 20px;
+        }
+        footer ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        footer ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Курсы</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="scrollToSection('it-section')">IT и программирование</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="scrollToSection('marketing-section')">Маркетинг и бизнес</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="scrollToSection('design-section')">Творчество и дизайн</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="jumbotron" style="background-image: url('edu_ban.jpg')">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6"></div>
+                    <div class="col-md-6 text-md-left banner-text">
+                        <h1 class="display-4 text-dark">Найди свой путь к знаниям</h1>
+                        <p class="lead text-dark">Выбери курс и начни учиться прямо сейчас</p>
+                        <a class="btn btn-secondary btn-lg" href="#" role="button" onclick="scrollToSection('it-section')">Начать</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="it-section" class="course-section">
+            <div class="container">
+                <h2>IT и программирование</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="course-item">
+                            <!-- Первый курс -->
+                            <h4>Введение в программирование на Python</h4>
+                            <img src="python.png" alt="Курс 1">
+                            <p>Этот курс предназначен для тех, кто только начинает свой путь в программировании. Вы освоите основы синтаксиса Python, научитесь создавать простые программы и решать задачи с использованием базовых конструкций языка.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="course-item">
+                            <!-- Второй курс -->
+                            <h4>Основы языка Java</h4>
+                            <img src="java.png" alt="Курс 2">
+                            <p>Java - мощный и универсальный язык программирования, широко используемый для создания приложений. В этом курсе вы изучите основы объектно-ориентированного программирования на Java, научитесь создавать классы, объекты, методы.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="course-item">
+                            <!-- Третий курс -->
+                            <h4>Программирование на C++</h4>
+                            <img src="c++.png" alt="Курс 3">
+                            <p>C++ - классический язык программирования, используемый для создания высокопроизводительных приложений. Этот курс погружает вас в мир C++, позволяя освоить основы языка, включая указатели, ссылки, классы, наследование и полиморфизм.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="course-item">
+                            <!-- Четвертый курс -->
+                            <h4>JavaScript для веб-разработки</h4>
+                            <img src="js.png" alt="Курс 4">
+                            <p>JavaScript является одним из основных языков программирования для веб-разработки. В этом курсе вы научитесь создавать интерактивные веб-страницы, работать с событиями, DOM и асинхронным программированием, что откроет перед вами мир веб-разработки.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="marketing-section" class="course-section">
+            <div class="container">
+                <h2>Маркетинг и бизнес</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="course-item">
+                            <!-- Первый курс -->
+                            <h4>Основы маркетинга</h4>
+                            <img src="marketing.png" alt="Курс 1">
+                            <p>На этом курсе вы изучите основные принципы маркетинга, узнаете о целевой аудитории и различных стратегиях продвижения товаров и услуг.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="course-item">
+                            <!-- Второй курс -->
+                            <h4>Финансовый менеджмент</h4>
+                            <img src="finance.png" alt="Курс 2">
+                            <p>Этот курс предназначен для тех, кто хочет освоить основы финансового менеджмента, научиться управлять финансами компании и принимать обоснованные финансовые решения.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Добавьте здесь еще подразделы по аналогии с разделом "IT и программирование" -->
+            </div>
+        </section>
+        
+        <section id="design-section" class="course-section">
+            <div class="container">
+                <h2>Творчество и дизайн</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="course-item">
+                            <!-- Первый курс -->
+                            <h4>Основы дизайна</h4>
+                            <img src="design.png" alt="Курс 1">
+                            <p>На этом курсе вы изучите основные принципы дизайна, научитесь работать с цветом, композицией и типографикой, чтобы создавать качественные дизайн-проекты.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="course-item">
+                            <!-- Второй курс -->
+                            <h4>Графический дизайн</h4>
+                            <img src="graphic_design.png" alt="Курс 2">
+                            <p>Этот курс предназначен для тех, кто хочет стать профессионалом в области графического дизайна. Вы изучите основные инструменты и техники создания графических проектов.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Content goes here -->
+    </main>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function scrollToSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Контакты:</h3>
+                    <p>Телефон: +375-25-777-77-77</p>
+                    <p>Электронная почта: info@it.by</p>
+                    <p>Адрес: ул. Солнечная, д. 12, Минск, Беларусь</p>
+                </div>
+                <div class="col-md-6">
+                    <h3>Следите за нами в социальных сетях:</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Instagram</li>
+                        <li>Twitter</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>О нас:</h3>
+                    <p>Мы - команда профессиональных преподавателей и экспертов в области информационных технологий, готовых поделиться своими знаниями и опытом с вами. Наша миссия - помочь вам достичь успеха в сфере IT и программирования через качественное образование и поддержку.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
